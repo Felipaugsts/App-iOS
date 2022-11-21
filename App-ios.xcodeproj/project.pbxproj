@@ -19,7 +19,6 @@
 		C597DB382928269300960EDC /* App_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C597DB372928269300960EDC /* App_iosApp.swift */; };
 		C597DB3A2928269300960EDC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C597DB392928269300960EDC /* ContentView.swift */; };
 		C597DB3C2928269400960EDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C597DB3B2928269400960EDC /* Assets.xcassets */; };
-		C597DB3F2928269400960EDC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C597DB3E2928269400960EDC /* Preview Assets.xcassets */; };
 		C597DB492928269500960EDC /* App_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C597DB482928269500960EDC /* App_iosTests.swift */; };
 		C597DB532928269500960EDC /* App_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C597DB522928269500960EDC /* App_iosUITests.swift */; };
 		C597DB552928269500960EDC /* App_iosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C597DB542928269500960EDC /* App_iosUITestsLaunchTests.swift */; };
@@ -60,7 +59,6 @@
 		C597DB372928269300960EDC /* App_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App_iosApp.swift; sourceTree = "<group>"; };
 		C597DB392928269300960EDC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C597DB3B2928269400960EDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C597DB3E2928269400960EDC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C597DB442928269500960EDC /* App-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "App-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C597DB482928269500960EDC /* App_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App_iosTests.swift; sourceTree = "<group>"; };
 		C597DB4E2928269500960EDC /* App-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "App-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +104,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C509ED6F292BDB8C0006DACD /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				C54BDC9E292834300039EF48 /* SideBar */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
 		C54BDC9E292834300039EF48 /* SideBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +126,7 @@
 		C54BDCAA29284DE70039EF48 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C597DB372928269300960EDC /* App_iosApp.swift */,
 				C54BDCAB29284E080039EF48 /* ContentView */,
 			);
 			path = Controllers;
@@ -178,21 +185,11 @@
 			children = (
 				C54BDCB1292850290039EF48 /* DI */,
 				C54BDCAE29284E390039EF48 /* Models */,
-				C54BDC9E292834300039EF48 /* SideBar */,
-				C597DB372928269300960EDC /* App_iosApp.swift */,
+				C509ED6F292BDB8C0006DACD /* Component */,
 				C54BDCAA29284DE70039EF48 /* Controllers */,
 				C597DB3B2928269400960EDC /* Assets.xcassets */,
-				C597DB3D2928269400960EDC /* Preview Content */,
 			);
 			path = "App-ios";
-			sourceTree = "<group>";
-		};
-		C597DB3D2928269400960EDC /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				C597DB3E2928269400960EDC /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		C597DB472928269500960EDC /* App-iosTests */ = {
@@ -330,7 +327,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C597DB3F2928269400960EDC /* Preview Assets.xcassets in Resources */,
 				C597DB3C2928269400960EDC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -588,7 +584,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"App-ios/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 2XF2MSD2V4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -618,7 +614,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"App-ios/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 2XF2MSD2V4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

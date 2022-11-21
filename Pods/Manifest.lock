@@ -1,0 +1,43 @@
+PODS:
+  - AppComponent (0.0.1)
+  - SDKCommon (0.0.2):
+    - Swinject
+    - SwinjectAutoregistration
+  - Swinject (2.7.1)
+  - SwinjectAutoregistration (2.8.1):
+    - Swinject (= 2.7.1)
+
+DEPENDENCIES:
+  - "AppComponent (from `git@github.com:Felipaugsts/AppComponent.git`, branch `main`)"
+  - "SDKCommon (from `git@github.com:Felipaugsts/Common.git`, branch `main`)"
+
+SPEC REPOS:
+  trunk:
+    - Swinject
+    - SwinjectAutoregistration
+
+EXTERNAL SOURCES:
+  AppComponent:
+    :branch: main
+    :git: "git@github.com:Felipaugsts/AppComponent.git"
+  SDKCommon:
+    :branch: main
+    :git: "git@github.com:Felipaugsts/Common.git"
+
+CHECKOUT OPTIONS:
+  AppComponent:
+    :commit: eadf9a736ffef5d9efd5cb2df24a0d70e1b8f14e
+    :git: "git@github.com:Felipaugsts/AppComponent.git"
+  SDKCommon:
+    :commit: 799694db150ae31b8701ca1803620edc271d77eb
+    :git: "git@github.com:Felipaugsts/Common.git"
+
+SPEC CHECKSUMS:
+  AppComponent: fc50a5da3806d59b19bcaf4dae1877b1af4bc99e
+  SDKCommon: e556960eb32457c859f9995c4c3a7f920893308b
+  Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
+  SwinjectAutoregistration: e83e362da3ca9c64a68290e89efbc40e378dff12
+
+PODFILE CHECKSUM: 7e5827e6de8a6c2fec503c39c4200411b7bd06a2
+
+COCOAPODS: 1.11.3

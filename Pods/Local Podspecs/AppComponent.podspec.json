@@ -1,6 +1,6 @@
 {
   "name": "AppComponent",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "summary": "A short description of AppComponent.",
   "homepage": "https://github.com/Felipaugsts/AppComponent",
   "license": {
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "git@github.com:Felipaugsts/AppComponent.git",
-    "tag": "0.0.1"
+    "tag": "0.0.2"
   },
   "platforms": {
     "ios": "10.0"

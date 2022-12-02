@@ -7,8 +7,8 @@ target 'App-ios' do
 
   # Pods for App-ios
 
-  pod 'SDKCommon', git: 'git@github.com:Felipaugsts/Common.git', branch: 'main'
-  pod 'AppComponent', git: 'git@github.com:Felipaugsts/AppComponent.git', branch: 'main'
+  pod 'SDKCommon', git: 'git@github.com:Felipaugsts/Common.git'
+  pod 'AppComponent', git: 'git@github.com:Felipaugsts/AppComponent.git'
   target 'App-iosTests' do
     inherit! :search_paths
     # Pods for testing

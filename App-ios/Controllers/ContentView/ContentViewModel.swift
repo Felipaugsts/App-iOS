@@ -7,6 +7,7 @@
 
 import Foundation
 import SDKCommon
+import AppComponent
 
 public protocol ContentViewProtocol: ObservableObject {
     var state: ViewModelState { get set }
@@ -28,6 +29,7 @@ public class ContentViewModel: ContentViewProtocol {
 
     public init(network: HTTPRequestProtocol) {
         self.network = network
+        appCommonModuleTest.instance.initFeature(externalDelegate: self)
     }
 
     public func fetchMovies() {
@@ -42,7 +44,8 @@ public class ContentViewModel: ContentViewProtocol {
                 } else {
                     self.setViewState(state: .loaded(response))
                 }
-            case .failure(_):
+            case .failure(let error):
+                print(error)
                 self.setViewState(state: .error("Something went wrong"))
             }
         }
@@ -52,5 +55,10 @@ public class ContentViewModel: ContentViewProtocol {
         DispatchQueue.main.async {
             self.state = state
         }
+    }
+}
+extension ContentViewModel: AppExternalDelegateProtocol {
+    public func didClickButton() {
+        print("clicked module test")
     }
 }

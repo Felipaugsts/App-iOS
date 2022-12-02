@@ -7,6 +7,7 @@
 
 import SwiftUI
 import AppComponent
+import SDKCommon
 
 public struct HomeView: View {
 
@@ -27,6 +28,9 @@ public struct HomeView: View {
                             DSMImage(url: URL(string: "https://image.tmdb.org/t/p/w500\(image)"))
 
                         }
+                    }
+                    NavigationLink("Go to another module") {
+                        TestView()
                     }
                     Spacer()
                 }

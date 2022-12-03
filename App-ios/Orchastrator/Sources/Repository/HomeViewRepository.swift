@@ -59,13 +59,11 @@ public class DefaultHomeViewRepository: HomeViewRepository {
 
         var carousel: [Post] = []
         for movie in results.results {
-            var image: String = "https://www.viewstorm.com/wp-content/uploads/2014/10/default-img.gif"
-            if let endpoint = movie.backdropPath {
-                image = "https://image.tmdb.org/t/p/w500\(endpoint)"
-            }
-            let moviePost = Post(image: image , imageId: "\(movie.id)")
 
-            carousel.append(moviePost)
+            if let endpoint = movie.posterPath {
+                var image = "https://image.tmdb.org/t/p/w500\(endpoint)"
+                carousel.append(Post(image: image , imageId: "\(movie.id)"))
+            }
         }
         return carousel
     }

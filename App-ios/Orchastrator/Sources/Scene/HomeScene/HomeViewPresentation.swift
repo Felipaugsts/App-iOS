@@ -23,9 +23,10 @@ public struct HomeView: View {
                 }
 
                 VStack {
-                    Carousel(images: movies) { image in
+                    Carousel(images: movies, width: 140) { image in
                         print(image.imageId)
                     }
+                    .padding(.top, 40)
                     NavigationLink("Go to another module") {
                         TestView()
                     }

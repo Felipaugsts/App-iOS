@@ -35,7 +35,7 @@ public class DefaultHomeViewRepository: HomeViewRepository {
 
     public func fetchPopular() {
         guard let url = URL(string: "https://api.themoviedb.org/3/tv/popular?api_key=86e8c11db101d22e54919a702fa851b4&language=en-US&") else {
-
+            popularState.value = .error("Invalid URL")
             return
         }
         

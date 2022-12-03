@@ -106,14 +106,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C509ED6F292BDB8C0006DACD /* Component */ = {
-			isa = PBXGroup;
-			children = (
-				C54BDC9E292834300039EF48 /* SideBar */,
-			);
-			path = Component;
-			sourceTree = "<group>";
-		};
 		C50B7550293BA8B1001274CF /* Repository */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,16 +125,16 @@
 			path = SideBar;
 			sourceTree = "<group>";
 		};
-		C54BDCAA29284DE70039EF48 /* Controllers */ = {
+		C54BDCAA29284DE70039EF48 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
 				C597DB372928269300960EDC /* App_iosApp.swift */,
-				C54BDCAB29284E080039EF48 /* ContentView */,
+				C54BDCAB29284E080039EF48 /* HomeScene */,
 			);
-			path = Controllers;
+			path = Scene;
 			sourceTree = "<group>";
 		};
-		C54BDCAB29284E080039EF48 /* ContentView */ = {
+		C54BDCAB29284E080039EF48 /* HomeScene */ = {
 			isa = PBXGroup;
 			children = (
 				C54BDCAE29284E390039EF48 /* Models */,
@@ -150,7 +142,7 @@
 				C54BDCAC29284E1A0039EF48 /* ContentViewModel.swift */,
 				C54BDCBA292929640039EF48 /* HomeViewPresentation.swift */,
 			);
-			path = ContentView;
+			path = HomeScene;
 			sourceTree = "<group>";
 		};
 		C54BDCAE29284E390039EF48 /* Models */ = {
@@ -194,11 +186,8 @@
 		C597DB362928269300960EDC /* App-ios */ = {
 			isa = PBXGroup;
 			children = (
-				C50B7550293BA8B1001274CF /* Repository */,
-				C54BDCB1292850290039EF48 /* DI */,
-				C509ED6F292BDB8C0006DACD /* Component */,
-				C54BDCAA29284DE70039EF48 /* Controllers */,
-				C597DB3B2928269400960EDC /* Assets.xcassets */,
+				C5C54693293BC79F0006ED5F /* Orchastrator */,
+				C5C54696293BC87B0006ED5F /* AppiOS */,
 			);
 			path = "App-ios";
 			sourceTree = "<group>";
@@ -218,6 +207,49 @@
 				C597DB542928269500960EDC /* App_iosUITestsLaunchTests.swift */,
 			);
 			path = "App-iosUITests";
+			sourceTree = "<group>";
+		};
+		C5C54693293BC79F0006ED5F /* Orchastrator */ = {
+			isa = PBXGroup;
+			children = (
+				C5C54694293BC7CB0006ED5F /* Sources */,
+			);
+			path = Orchastrator;
+			sourceTree = "<group>";
+		};
+		C5C54694293BC7CB0006ED5F /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				C50B7550293BA8B1001274CF /* Repository */,
+				C5C54695293BC7E70006ED5F /* Infrastructure */,
+				C54BDCAA29284DE70039EF48 /* Scene */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		C5C54695293BC7E70006ED5F /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				C54BDC9E292834300039EF48 /* SideBar */,
+				C54BDCB1292850290039EF48 /* DI */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		C5C54696293BC87B0006ED5F /* AppiOS */ = {
+			isa = PBXGroup;
+			children = (
+				C5C54697293BC88A0006ED5F /* Assets */,
+			);
+			path = AppiOS;
+			sourceTree = "<group>";
+		};
+		C5C54697293BC88A0006ED5F /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				C597DB3B2928269400960EDC /* Assets.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		F860D6F9BBFABA27B6D2762A /* Pods */ = {
@@ -313,7 +345,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C597DB2F2928269300960EDC /* Build configuration list for PBXProject "App-ios" */;
+			buildConfigurationList = C597DB2F2928269300960EDC /* Build configuration list for PBXProject "App-iOS" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -729,7 +761,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C597DB2F2928269300960EDC /* Build configuration list for PBXProject "App-ios" */ = {
+		C597DB2F2928269300960EDC /* Build configuration list for PBXProject "App-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C597DB562928269500960EDC /* Debug */,

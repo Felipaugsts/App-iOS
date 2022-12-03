@@ -50,6 +50,7 @@ public struct HomeView: View {
                             height: 16,
                             foregroundColor: .white,
                             backgroundColor: .primary)
+            
                 })
 
                 .navigationBarItems(trailing:

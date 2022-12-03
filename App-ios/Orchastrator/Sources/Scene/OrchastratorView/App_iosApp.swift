@@ -16,13 +16,9 @@ struct App_iosApp: App {
         MyAppAssemblies.register()
     }
 
-    var repository: HomeViewRepository {
-        AppAssembler.resolve(HomeViewRepository.self)
-    }
-
     var body: some Scene {
         WindowGroup {
-            ContentView(viewModel: ContentViewModel(repository: repository))
+            HomeViewBuilder.build()
         }
     }
 }

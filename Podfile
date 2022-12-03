@@ -9,6 +9,8 @@ target 'App-ios' do
 
   pod 'SDKCommon', git: 'git@github.com:Felipaugsts/Common.git'
   pod 'AppComponent', git: 'git@github.com:Felipaugsts/AppComponent.git'
+  pod 'lottie-ios'
+  
   target 'App-iosTests' do
     inherit! :search_paths
     # Pods for testing

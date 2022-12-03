@@ -13,7 +13,7 @@ public struct HomeView: View {
 
     @State private var isShowing = false
 
-    var movies: [MovieResults]
+    var movies: [Post]
 
     public var body: some View {
         NavigationView {
@@ -23,18 +23,15 @@ public struct HomeView: View {
                 }
 
                 VStack {
-                    HStack {
-                        if let image = movies[4].backdropPath {
-                            DSMImage(url: URL(string: "https://image.tmdb.org/t/p/w500\(image)"))
-
-                        }
+                    Carousel(images: movies) { image in
+                        print(image.imageId)
                     }
                     NavigationLink("Go to another module") {
                         TestView()
                     }
                     Spacer()
                 }
-                .background(.white)
+                .background(Color.black)
                 .cornerRadius(isShowing ? 20 : 10)
                 .offset(x: isShowing ? 200 : 0, y: isShowing ? 44 : 0)
                 .scaleEffect(isShowing ? 0.8 : 1)
@@ -65,6 +62,7 @@ public struct HomeView: View {
                     .navigationBarTitleDisplayMode(.inline)
 
             }
+            .background(Color.black)
         }
     }
 }

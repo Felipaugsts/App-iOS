@@ -3,4 +3,70 @@
    uuid = "A5C248F3-AAC7-483E-A8E4-3704D9669033"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FCDC0DE6-C5D3-4797-859B-886CD09330A9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "App-ios/Controllers/ContentView/HomeViewPresentation.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "FCDC0DE6-C5D3-4797-859B-886CD09330A9 - 1270d4658462993b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(AppComponent.Carousel, SwiftUI.NavigationLink&lt;SwiftUI.Text, SDKCommon.TestView&gt;, SwiftUI.Spacer)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(Swift.Optional&lt;App_ios.SideMenuView&gt;, &lt;&lt;opaque return type of SwiftUI.View.navigationBarTitleDisplayMode(SwiftUI.NavigationBarItem.TitleDisplayMode) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.ZStack&lt;SwiftUI.TupleView&lt;(Swift.Optional&lt;App_ios.SideMenuView&gt;, &lt;&lt;opaque return type of SwiftUI.View.navigationBarTitleDisplayMode(SwiftUI.NavigationBarItem.TitleDisplayMode) -&gt; some&gt;&gt;.0)&gt;&gt; in App_ios.HomeView.body.getter : some"
+                  moduleName = "App-ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/felipeas/Desktop/PERSONAL/projects/ios/App-ios/App-ios/Controllers/ContentView/HomeViewPresentation.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "283">
+               </Location>
+               <Location
+                  uuid = "FCDC0DE6-C5D3-4797-859B-886CD09330A9 - c8c8751e2171f998"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (AppComponent.Post) -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(AppComponent.Carousel, SwiftUI.NavigationLink&lt;SwiftUI.Text, SDKCommon.TestView&gt;, SwiftUI.Spacer)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(Swift.Optional&lt;App_ios.SideMenuView&gt;, &lt;&lt;opaque return type of SwiftUI.View.navigationBarTitleDisplayMode(SwiftUI.NavigationBarItem.TitleDisplayMode) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.ZStack&lt;SwiftUI.TupleView&lt;(Swift.Optional&lt;App_ios.SideMenuView&gt;, &lt;&lt;opaque return type of SwiftUI.View.navigationBarTitleDisplayMode(SwiftUI.NavigationBarItem.TitleDisplayMode) -&gt; some&gt;&gt;.0)&gt;&gt; in App_ios.HomeView.body.getter : some"
+                  moduleName = "App-ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/felipeas/Desktop/PERSONAL/projects/ios/App-ios/App-ios/Controllers/ContentView/HomeViewPresentation.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "44B76088-4468-483C-B386-689EFE62A940"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "App-ios/Controllers/ContentView/ContentViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "loadImages(results:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

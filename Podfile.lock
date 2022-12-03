@@ -1,5 +1,5 @@
 PODS:
-  - AppComponent (0.0.3):
+  - AppComponent (0.0.5):
     - SDWebImageSwiftUI
   - SDKCommon (0.0.4):
     - Swinject
@@ -32,14 +32,14 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   AppComponent:
-    :commit: 722406d02d3f15eac18bda6c806f383152952fc9
+    :commit: b74b05853209cf48d245c7296e112e65e849d38a
     :git: "git@github.com:Felipaugsts/AppComponent.git"
   SDKCommon:
     :commit: 64d668477857fcd32531d18d0b2ff4f4b5a7ac08
     :git: "git@github.com:Felipaugsts/Common.git"
 
 SPEC CHECKSUMS:
-  AppComponent: 486af9acc40cf9b834b38587b03622e85a56180b
+  AppComponent: c047d9f6522133190e44d28466f1c614ab0f18eb
   SDKCommon: 465cebfaefea59da6ce6527b0cd350c312daae2d
   SDWebImage: b9a731e1d6307f44ca703b3976d18c24ca561e84
   SDWebImageSwiftUI: 2ecf5ab6f574526326b10ecb155e72a88059d0f0

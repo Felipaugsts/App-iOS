@@ -27,7 +27,7 @@ public struct ContentView<ViewModel>: View where ViewModel: ContentViewProtocol 
 
             switch viewModel.state {
             case .loaded(let movies):
-                HomeView(movies: movies.results)
+                HomeView(movies: movies)
             case .empty(let message):
                 Text(message)
 

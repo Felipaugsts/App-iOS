@@ -16,7 +16,7 @@ public protocol ContentViewProtocol: ObservableObject {
 }
 public enum ViewModelState {
     case loading
-    case loaded(MovieModel)
+    case loaded([Post])
     case empty(String)
     case error(String)
 }
@@ -42,13 +42,28 @@ public class ContentViewModel: ContentViewProtocol {
                 if response.results.isEmpty {
                     self.setViewState(state: .empty("View is empty"))
                 } else {
-                    self.setViewState(state: .loaded(response))
+                    self.loadImages(results: response)
                 }
             case .failure(let error):
                 print(error)
                 self.setViewState(state: .error("Something went wrong"))
             }
         }
+    }
+
+    private func loadImages(results: MovieModel) {
+
+        var carousel: [Post] = []
+        for movie in results.results {
+            var image: String = "https://www.viewstorm.com/wp-content/uploads/2014/10/default-img.gif"
+            if let endpoint = movie.backdropPath {
+                image = "https://image.tmdb.org/t/p/w500\(endpoint)"
+            }
+            let moviePost = Post(image: image , imageId: "\(movie.id)")
+
+            carousel.append(moviePost)
+        }
+        setViewState(state: .loaded(carousel))
     }
 
     private func setViewState(state: ViewModelState) {

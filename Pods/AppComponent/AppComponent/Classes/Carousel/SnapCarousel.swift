@@ -13,29 +13,32 @@ public struct SnapCarousel<Content: View, T: Identifiable>:  View {
 
     var spacing: CGFloat
     var trailingSpace: CGFloat
+    var width: CGFloat
+    var proxyWidth: CGFloat
     @Binding var index: Int
 
-    public init(spacing: CGFloat = 15, trailingSpace: CGFloat = 100, index: Binding<Int>, items: [T], @ViewBuilder content: @escaping (T) -> Content) {
+    public init(spacing: CGFloat = 15,proxyWidth: CGFloat, trailingSpace: CGFloat = 100, width: CGFloat, index: Binding<Int>, items: [T], @ViewBuilder content: @escaping (T) -> Content) {
         self.list = items
         self.spacing = spacing
         self.trailingSpace = trailingSpace
         self._index = index
         self.content = content
+        self.width = width
+        self.proxyWidth = proxyWidth
     }
 
     @GestureState var offset: CGFloat = 0
     @State var currentIndex: Int = 0
 
     public var body: some View {
-        GeometryReader { proxy in
 
-            let width = proxy.size.width - (trailingSpace - spacing)
+            let width = proxyWidth - (trailingSpace - spacing)
             let adjustMentWidth = (trailingSpace / 2) - spacing
 
             HStack(spacing: spacing) {
                 ForEach(list){item in
                     content(item)
-                        .frame(width: proxy.size.width - trailingSpace)
+                        .frame(width: self.width)
                 }
             }
             .padding(.horizontal, spacing)
@@ -66,7 +69,6 @@ public struct SnapCarousel<Content: View, T: Identifiable>:  View {
                 })
             )
             .animation(.easeInOut, value: offset == 0)
-        }
     }
 }
 

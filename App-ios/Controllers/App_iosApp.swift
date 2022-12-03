@@ -16,13 +16,13 @@ struct App_iosApp: App {
         MyAppAssemblies.register()
     }
 
-    var network: HTTPRequestProtocol {
-        AppAssembler.resolve(HTTPRequestProtocol.self)
+    var repository: HomeViewRepository {
+        AppAssembler.resolve(HomeViewRepository.self)
     }
 
     var body: some Scene {
         WindowGroup {
-            ContentView(viewModel: ContentViewModel(network: network))
+            ContentView(viewModel: ContentViewModel(repository: repository))
         }
     }
 }

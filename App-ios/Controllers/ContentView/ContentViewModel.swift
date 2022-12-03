@@ -12,68 +12,61 @@ import AppComponent
 public protocol ContentViewProtocol: ObservableObject {
     var state: ViewModelState { get set }
 
-    func fetchMovies() -> Void
+    func loadMovies()
 }
-public enum ViewModelState {
-    case loading
-    case loaded([Post])
-    case empty(String)
-    case error(String)
-}
+
+// MARK: - Implementation
+
 public class ContentViewModel: ContentViewProtocol {
+
+    // MARK: - Variable
 
     @Published
     public var state: ViewModelState = .loading
+    var repository: HomeViewRepository
 
-    var network: HTTPRequestProtocol
+    // MARK: - Initializer
 
-    public init(network: HTTPRequestProtocol) {
-        self.network = network
+    public init(repository: HomeViewRepository) {
+        self.repository = repository
         appCommonModuleTest.instance.initFeature(externalDelegate: self)
+        setupListeners()
     }
 
-    public func fetchMovies() {
-        guard let url = URL(string: "https://api.themoviedb.org/3/tv/popular?api_key=86e8c11db101d22e54919a702fa851b4&language=en-US&") else { return }
-        state = .loading
+    // MARK: Public Method
 
-        network.fetch(url: url) { (result: Result<MovieModel, Error>) in
-            switch result {
-            case .success(let response):
-                if response.results.isEmpty {
-                    self.setViewState(state: .empty("View is empty"))
-                } else {
-                    self.loadImages(results: response)
-                }
-            case .failure(let error):
-                print(error)
-                self.setViewState(state: .error("Something went wrong"))
-            }
+    public func loadMovies() {
+        repository.fetchPopular()
+    }
+
+    // MARK: - Private methods
+
+    private func setupListeners() {
+        repository.popularState.bind { state in
+            self.set(state: state)
         }
     }
 
-    private func loadImages(results: MovieModel) {
-
-        var carousel: [Post] = []
-        for movie in results.results {
-            var image: String = "https://www.viewstorm.com/wp-content/uploads/2014/10/default-img.gif"
-            if let endpoint = movie.backdropPath {
-                image = "https://image.tmdb.org/t/p/w500\(endpoint)"
-            }
-            let moviePost = Post(image: image , imageId: "\(movie.id)")
-
-            carousel.append(moviePost)
-        }
-        setViewState(state: .loaded(carousel))
-    }
-
-    private func setViewState(state: ViewModelState) {
+    private func set(state: ViewModelState) {
         DispatchQueue.main.async {
             self.state = state
         }
     }
 }
+
+// To be removed
+
 extension ContentViewModel: AppExternalDelegateProtocol {
     public func didClickButton() {
         print("clicked module test")
     }
+}
+
+// MARK: - ENUM
+
+public enum ViewModelState {
+    case loading
+    case loaded([Post])
+    case empty(String)
+    case error(String)
 }

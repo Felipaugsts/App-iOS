@@ -24,20 +24,16 @@ public struct ContentView<ViewModel>: View where ViewModel: ContentViewProtocol 
 
     public  var body: some View {
         ZStack {
-
             switch viewModel.state {
             case .loaded(let movies):
                 HomeView(movies: movies)
             case .empty(let message):
                 Text(message)
-
             case .error(let message):
                 Text(message)
-
             case .loading:
                 ProgressView()
             }
-
-        }.onAppear(perform: viewModel.fetchMovies)
+        }.onAppear(perform: viewModel.loadMovies)
     }
 }

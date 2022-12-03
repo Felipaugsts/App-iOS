@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8C92773444E4FC8C89130640 /* Pods_App_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8237E4839617E32B169A822 /* Pods_App_ios.framework */; };
+		C50B7552293BA8EE001274CF /* HomeViewRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50B7551293BA8EE001274CF /* HomeViewRepository.swift */; };
 		C54BDCA02928344B0039EF48 /* SideMenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54BDC9F2928344B0039EF48 /* SideMenuHeaderView.swift */; };
 		C54BDCA2292834A00039EF48 /* SideMenuOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54BDCA1292834A00039EF48 /* SideMenuOptionView.swift */; };
 		C54BDCA4292834B80039EF48 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54BDCA3292834B80039EF48 /* SideMenuView.swift */; };
@@ -47,6 +48,7 @@
 		28E5A3DCC56C2B0ED70B7986 /* Pods-App-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-ios.debug.xcconfig"; path = "Target Support Files/Pods-App-ios/Pods-App-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		991F01A6A64EF953DA390FEF /* Pods-App-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-ios.release.xcconfig"; path = "Target Support Files/Pods-App-ios/Pods-App-ios.release.xcconfig"; sourceTree = "<group>"; };
 		C055C29D0FAAA4D1EEF36B99 /* Pods-App-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-iosTests.debug.xcconfig"; path = "Target Support Files/Pods-App-iosTests/Pods-App-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C50B7551293BA8EE001274CF /* HomeViewRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewRepository.swift; sourceTree = "<group>"; };
 		C54BDC9F2928344B0039EF48 /* SideMenuHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuHeaderView.swift; sourceTree = "<group>"; };
 		C54BDCA1292834A00039EF48 /* SideMenuOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuOptionView.swift; sourceTree = "<group>"; };
 		C54BDCA3292834B80039EF48 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
@@ -112,6 +114,14 @@
 			path = Component;
 			sourceTree = "<group>";
 		};
+		C50B7550293BA8B1001274CF /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				C50B7551293BA8EE001274CF /* HomeViewRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		C54BDC9E292834300039EF48 /* SideBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +145,7 @@
 		C54BDCAB29284E080039EF48 /* ContentView */ = {
 			isa = PBXGroup;
 			children = (
+				C54BDCAE29284E390039EF48 /* Models */,
 				C597DB392928269300960EDC /* ContentView.swift */,
 				C54BDCAC29284E1A0039EF48 /* ContentViewModel.swift */,
 				C54BDCBA292929640039EF48 /* HomeViewPresentation.swift */,
@@ -183,8 +194,8 @@
 		C597DB362928269300960EDC /* App-ios */ = {
 			isa = PBXGroup;
 			children = (
+				C50B7550293BA8B1001274CF /* Repository */,
 				C54BDCB1292850290039EF48 /* DI */,
-				C54BDCAE29284E390039EF48 /* Models */,
 				C509ED6F292BDB8C0006DACD /* Component */,
 				C54BDCAA29284DE70039EF48 /* Controllers */,
 				C597DB3B2928269400960EDC /* Assets.xcassets */,
@@ -421,6 +432,7 @@
 				C54BDCAD29284E1A0039EF48 /* ContentViewModel.swift in Sources */,
 				C54BDCBB292929640039EF48 /* HomeViewPresentation.swift in Sources */,
 				C54BDCA02928344B0039EF48 /* SideMenuHeaderView.swift in Sources */,
+				C50B7552293BA8EE001274CF /* HomeViewRepository.swift in Sources */,
 				C54BDCA2292834A00039EF48 /* SideMenuOptionView.swift in Sources */,
 				C54BDCA4292834B80039EF48 /* SideMenuView.swift in Sources */,
 				C597DB3A2928269300960EDC /* ContentView.swift in Sources */,
@@ -646,7 +658,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2XF2MSD2V4;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Felipe.App-iosTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -667,7 +679,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2XF2MSD2V4;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Felipe.App-iosTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -38,28 +38,28 @@ public struct HomeView: View {
                 .allowsHitTesting(isShowing ? false : true)
                 .shadow(radius: isShowing ? 10 : 0)
 
-                    .navigationBarItems(leading:
-                                            Button(action: {
-                        withAnimation(.spring())
-                        {
-                            isShowing.toggle()
-                        }
-                    }) {
-                        DSMIcon(src: "line.horizontal.3",
-                             width: 16,
-                             height: 16,
-                             foregroundColor: .white,
-                             backgroundColor: .primary)
-                    })
+                .navigationBarItems(leading:
+                                        Button(action: {
+                    withAnimation(.spring())
+                    {
+                        isShowing.toggle()
+                    }
+                }) {
+                    DSMIcon(src: "line.horizontal.3",
+                            width: 16,
+                            height: 16,
+                            foregroundColor: .white,
+                            backgroundColor: .primary)
+                })
 
-                    .navigationBarItems(trailing:
-                                            Button(action: {
-                    }) {
-                        DSMIcon(src: "magnifyingglass",
-                             foregroundColor: .white,
-                             backgroundColor: .primary)
-                    })
-                    .navigationBarTitleDisplayMode(.inline)
+                .navigationBarItems(trailing:
+                                        Button(action: {
+                }) {
+                    DSMIcon(src: "magnifyingglass",
+                            foregroundColor: .white,
+                            backgroundColor: .primary)
+                })
+                .navigationBarTitleDisplayMode(.inline)
 
             }
             .background(Color.black)

@@ -1,8 +1,14 @@
 PODS:
-  - AppComponent (0.0.2)
+  - AppComponent (0.0.3):
+    - SDWebImageSwiftUI
   - SDKCommon (0.0.4):
     - Swinject
     - SwinjectAutoregistration
+  - SDWebImage (5.14.2):
+    - SDWebImage/Core (= 5.14.2)
+  - SDWebImage/Core (5.14.2)
+  - SDWebImageSwiftUI (2.2.1):
+    - SDWebImage (~> 5.10)
   - Swinject (2.7.1)
   - SwinjectAutoregistration (2.8.1):
     - Swinject (= 2.7.1)
@@ -13,6 +19,8 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - SDWebImage
+    - SDWebImageSwiftUI
     - Swinject
     - SwinjectAutoregistration
 
@@ -24,15 +32,17 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   AppComponent:
-    :commit: eb46e106e6d3e0388a190c1c25aa1b26c1636bd5
+    :commit: 722406d02d3f15eac18bda6c806f383152952fc9
     :git: "git@github.com:Felipaugsts/AppComponent.git"
   SDKCommon:
     :commit: 64d668477857fcd32531d18d0b2ff4f4b5a7ac08
     :git: "git@github.com:Felipaugsts/Common.git"
 
 SPEC CHECKSUMS:
-  AppComponent: 067c28b1cf037630f10f55a694968dd5001c097e
+  AppComponent: 486af9acc40cf9b834b38587b03622e85a56180b
   SDKCommon: 465cebfaefea59da6ce6527b0cd350c312daae2d
+  SDWebImage: b9a731e1d6307f44ca703b3976d18c24ca561e84
+  SDWebImageSwiftUI: 2ecf5ab6f574526326b10ecb155e72a88059d0f0
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
   SwinjectAutoregistration: e83e362da3ca9c64a68290e89efbc40e378dff12
 

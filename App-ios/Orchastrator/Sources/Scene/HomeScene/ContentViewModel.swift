@@ -36,10 +36,18 @@ public class ContentViewModel: ContentViewProtocol {
     // MARK: Public Method
 
     public func loadMovies() {
-        repository.fetchPopular()
+        if isUserAuthenticated() {
+            repository.fetchPopular()
+        } else {
+            set(state: .noAuthenticated)
+        }
     }
 
     // MARK: - Private methods
+
+    private func isUserAuthenticated() -> Bool {
+        true
+    }
 
     private func setupListeners() {
         repository.popularState.bind { state in
@@ -69,4 +77,5 @@ public enum ViewModelState {
     case loaded([Post])
     case empty(String)
     case error(String)
+    case noAuthenticated
 }

@@ -33,6 +33,8 @@ public struct ContentView<ViewModel>: View where ViewModel: ContentViewProtocol 
                 Text(message)
             case .loading:
                 ProgressView()
+            case .noAuthenticated:
+                Text("Go to loggin")
             }
         }.onAppear(perform: viewModel.loadMovies)
     }

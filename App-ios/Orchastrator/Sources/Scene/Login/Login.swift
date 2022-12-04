@@ -6,15 +6,14 @@
 //
 
 import SwiftUI
+import AppComponent
 
 struct Login: View {
     var body: some View {
-        Text("Login")
+        VStack {
+            Text("Login")
+            LinkButton(destination: HomeViewBuilder.build(), title: "Login", background: .black, foregroundColor: .black, width: 140, height: 10, corner: 5)
+        }
+
     }
 }
-
-//struct Login_Previews: PreviewProvider {
-//    static var previews: some View {
-//        Login()
-//    }
-//}

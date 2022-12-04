@@ -1,8 +1,8 @@
 PODS:
-  - AppComponent (0.0.5):
+  - AppComponent (0.0.6):
     - SDWebImageSwiftUI
   - lottie-ios (3.5.0)
-  - SDKCommon (0.0.4):
+  - SDKCommon (0.0.5):
     - Swinject
     - SwinjectAutoregistration
   - SDWebImage (5.14.2):
@@ -35,16 +35,16 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   AppComponent:
-    :commit: b74b05853209cf48d245c7296e112e65e849d38a
+    :commit: 0c358e5f00d1050e1b1d7c2b3f6a5d48d9117638
     :git: "git@github.com:Felipaugsts/AppComponent.git"
   SDKCommon:
-    :commit: 64d668477857fcd32531d18d0b2ff4f4b5a7ac08
+    :commit: 6556333f9099c71b0c256abb4f672b2cb7df85df
     :git: "git@github.com:Felipaugsts/Common.git"
 
 SPEC CHECKSUMS:
-  AppComponent: c047d9f6522133190e44d28466f1c614ab0f18eb
+  AppComponent: cc91294b11d8520a1b4900124ca312778bceff99
   lottie-ios: c55158d67d0629a260625cc2ded2052b829e3c3e
-  SDKCommon: 465cebfaefea59da6ce6527b0cd350c312daae2d
+  SDKCommon: 5f3b8683fd3f1ffe89136ecdf07f2c433cf6ddf3
   SDWebImage: b9a731e1d6307f44ca703b3976d18c24ca561e84
   SDWebImageSwiftUI: 2ecf5ab6f574526326b10ecb155e72a88059d0f0
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e

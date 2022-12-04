@@ -23,7 +23,6 @@ public struct ContentView<ViewModel>: View where ViewModel: ContentViewProtocol 
     private var viewModel: ViewModel
 
     public  var body: some View {
-        NavigationView {
             ZStack {
                 switch viewModel.state {
                 case .loaded(let movies):
@@ -35,9 +34,9 @@ public struct ContentView<ViewModel>: View where ViewModel: ContentViewProtocol 
                 case .loading:
                     ProgressView()
                 case .noAuthenticated:
-                    ErrorView()
+                    WelcomeView()
                 }
             }.onAppear(perform: viewModel.loadMovies)
-        }
+            .navigationBarBackButtonHidden()
     }
 }

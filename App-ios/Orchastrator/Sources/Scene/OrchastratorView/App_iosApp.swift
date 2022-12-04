@@ -11,6 +11,8 @@ import SDKCommon
 @main
 struct App_iosApp: App {
 
+    var isAuthenticated: Bool = false
+
     init() {
         SDKCommonAssemblies.register()
         MyAppAssemblies.register()
@@ -18,7 +20,13 @@ struct App_iosApp: App {
 
     var body: some Scene {
         WindowGroup {
-            HomeViewBuilder.build()
+            NavigationView {
+                if isAuthenticated {
+                    HomeViewBuilder.build()
+                } else {
+                    WelcomeView()
+                }
+            }
         }
     }
 }

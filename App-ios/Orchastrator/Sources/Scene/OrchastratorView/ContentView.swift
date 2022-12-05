@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SDKCommon
+import AppComponent
 
 
 public struct ContentView<ViewModel>: View where ViewModel: ContentViewProtocol {
@@ -30,7 +31,11 @@ public struct ContentView<ViewModel>: View where ViewModel: ContentViewProtocol 
                 case .empty(let message):
                     Text(message)
                 case .error(let message):
-                    Text(message)
+                    GenericView(image: "error",
+                                loopMode: .loop,
+                                msg: message,
+                                present: Login(),
+                                buttonText: "Try again")
                 case .loading:
                     ProgressView()
                 case .noAuthenticated:

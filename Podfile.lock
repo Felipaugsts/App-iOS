@@ -1,5 +1,6 @@
 PODS:
-  - AppComponent (0.0.6):
+  - AppComponent (0.0.7):
+    - lottie-ios
     - SDWebImageSwiftUI
   - lottie-ios (3.5.0)
   - SDKCommon (0.0.5):
@@ -35,14 +36,14 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   AppComponent:
-    :commit: 0c358e5f00d1050e1b1d7c2b3f6a5d48d9117638
+    :commit: 96510c56f97883185068c3fbbb8e009ecc777cc7
     :git: "git@github.com:Felipaugsts/AppComponent.git"
   SDKCommon:
     :commit: 6556333f9099c71b0c256abb4f672b2cb7df85df
     :git: "git@github.com:Felipaugsts/Common.git"
 
 SPEC CHECKSUMS:
-  AppComponent: cc91294b11d8520a1b4900124ca312778bceff99
+  AppComponent: 67bb1d89f0119f5020bd8589c3bd595381029876
   lottie-ios: c55158d67d0629a260625cc2ded2052b829e3c3e
   SDKCommon: 5f3b8683fd3f1ffe89136ecdf07f2c433cf6ddf3
   SDWebImage: b9a731e1d6307f44ca703b3976d18c24ca561e84

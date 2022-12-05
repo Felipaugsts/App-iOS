@@ -50,8 +50,8 @@ public class ContentViewModel: ContentViewProtocol {
     }
 
     private func setupListeners() {
-        repository.popularState.bind { state in
-            self.set(state: state)
+        repository.popularState.bind { [weak self] state in
+            self?.set(state: state)
         }
     }
 

@@ -1,21 +1,32 @@
 //
 //  LottieView.swift
-//  App-ios
+//  AppComponent
 //
-//  Created by FELIPE AUGUSTO SILVA on 03/12/22.
+//  Created by FELIPE AUGUSTO SILVA on 05/12/22.
 //
 
 import SwiftUI
 import Lottie
 
+public struct LottieView: UIViewRepresentable {
 
-struct LottieView: UIViewRepresentable {
+    // MARK: - Variables
+    
     var name: String
     var loopMode: LottieLoopMode = .playOnce
-
     var animationView = LottieAnimationView()
 
-    func makeUIView(context: UIViewRepresentableContext<LottieView>) -> UIView {
+    // MARK: - Initializer
+
+    public init(name: String, loopMode: LottieLoopMode, animationView: LottieAnimationView = LottieAnimationView()) {
+        self.name = name
+        self.loopMode = loopMode
+        self.animationView = animationView
+    }
+
+    // MARK: - Public methods
+
+    public func makeUIView(context: UIViewRepresentableContext<LottieView>) -> UIView {
         let view = UIView(frame: .zero)
 
         animationView.animation = Animation.named(name)
@@ -34,5 +45,5 @@ struct LottieView: UIViewRepresentable {
         return view
     }
 
-    func updateUIView(_ uiView: UIView, context: UIViewRepresentableContext<LottieView>) {}
+    public func updateUIView(_ uiView: UIView, context: UIViewRepresentableContext<LottieView>) {}
 }

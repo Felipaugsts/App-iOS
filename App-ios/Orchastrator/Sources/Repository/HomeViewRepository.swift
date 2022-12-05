@@ -48,7 +48,7 @@ public class DefaultHomeViewRepository: HomeViewRepository {
                     self.popularState.value = .loaded(self.loadImages(results: response))
                 }
             case .failure(let failure):
-                self.popularState.value = .error("error: \(failure)")
+                self.popularState.value = .error("\(failure.localizedDescription)")
             }
         }
     }
@@ -61,7 +61,7 @@ public class DefaultHomeViewRepository: HomeViewRepository {
         for movie in results.results {
 
             if let endpoint = movie.posterPath {
-                var image = "https://image.tmdb.org/t/p/w500\(endpoint)"
+                let image = "https://image.tmdb.org/t/p/w500\(endpoint)"
                 carousel.append(Post(image: image , imageId: "\(movie.id)"))
             }
         }

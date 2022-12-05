@@ -8,9 +8,9 @@
 import SwiftUI
 import AppComponent
 
-public struct WelcomeView: View {
+struct WelcomeView: View {
     
-    public var body: some View {
+    var body: some View {
             VStack {
                 Spacer()
                 VStack {
@@ -33,6 +33,7 @@ public struct WelcomeView: View {
                     .edgesIgnoringSafeArea(.all)
                     .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
             )
+            .navigationBarBackButtonHidden()
     }
 }
 

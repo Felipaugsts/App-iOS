@@ -12,6 +12,7 @@ enum SideMenuViewModel: Int, CaseIterable {
     case profile
     case Favorites
     case Settings
+    case logout
 
     var title: String {
         switch self {
@@ -22,6 +23,8 @@ enum SideMenuViewModel: Int, CaseIterable {
             return "Favorites"
         case .Settings:
             return "Settings"
+        case .logout:
+            return "Logout"
         }
     }
     var imageName: String {
@@ -33,17 +36,20 @@ enum SideMenuViewModel: Int, CaseIterable {
             return "heart"
         case .Settings:
             return "bell"
+        case .logout:
+            return "bell"
         }
     }
 
     var views: some View {
         switch self {
-
         case .profile:
             return ProfileView()
         case .Favorites:
             return ProfileView()
         case .Settings:
+            return ProfileView()
+        case .logout:
             return ProfileView()
         }
     }
@@ -56,6 +62,9 @@ struct ProfileView: View {
             HStack {
                 Spacer()
                 Text("Hello world")
+                NavigationLink(destination: WelcomeView()) {
+                    Text("logout")
+                }
                 Spacer()
             }
             Spacer()

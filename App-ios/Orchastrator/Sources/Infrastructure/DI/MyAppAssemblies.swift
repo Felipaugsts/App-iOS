@@ -16,8 +16,8 @@ public enum MyAppAssemblies {
 
 final class myAppAssembliesRegistration: AppAssembly {
     func assemble(container: AppsContainer) {
-        container.autoregister((any ContentViewProtocol).self, initializer: ContentViewModel.init)
-        container.autoregister(HomeViewRepository.self, initializer: DefaultHomeViewRepository.init)
-        container.autoregister(AuthenticationProtocol.self, initializer: AuthenticationViewModel.init)
+        container.autoregister((any ContentViewProtocol).self, initializer: ContentViewModel.init).inObjectScope(.container)
+        container.autoregister(HomeViewRepository.self, initializer: DefaultHomeViewRepository.init).inObjectScope(.container)
+        container.autoregister(AuthenticationProtocol.self, initializer: AuthenticationViewModel.init).inObjectScope(.container)
     }
 }

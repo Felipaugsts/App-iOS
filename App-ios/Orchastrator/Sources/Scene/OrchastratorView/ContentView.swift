@@ -35,9 +35,10 @@ public struct ContentView<ViewModel>: View where ViewModel: ContentViewProtocol 
                                 loopMode: .loop,
                                 msg: message,
                                 present: Login(),
-                                buttonText: "Try again")
+                                buttonText: "Try again",
+                                displayButton: true)
                 case .loading:
-                    ProgressView()
+                   ProgressView()
                 case .noAuthenticated:
                     WelcomeView()
                 }

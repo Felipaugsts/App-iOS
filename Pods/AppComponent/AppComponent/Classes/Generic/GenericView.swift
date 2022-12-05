@@ -15,13 +15,15 @@ public struct GenericView<T: View> :View {
     var msg: String
     var present: T
     var buttonText: String
+    var displayButton: Bool
 
-    public init(image: String, loopMode: LottieLoopMode, msg: String, present: T, buttonText: String) {
+    public init(image: String, loopMode: LottieLoopMode = .loop, msg: String = "", present: T = EmptyView(), buttonText: String = "", displayButton: Bool = false) {
         self.image = image
         self.loopMode = loopMode
         self.msg = msg
         self.present = present
         self.buttonText = buttonText
+        self.displayButton = displayButton
     }
 
     public var body: some View {
@@ -31,18 +33,20 @@ public struct GenericView<T: View> :View {
             Text(msg)
                 .padding(.bottom, 20)
                 .font(.title2)
-            NavigationLink(destination: present
-            ) {
-                Text(buttonText)
-            }
-            .foregroundColor(Color.white)
-            .padding(.horizontal, 30)
-            .padding(.vertical, 15)
-            .background {
-                Color.blue.opacity(0.8)
-            }
-            .cornerRadius(10)
+            if displayButton {
+                NavigationLink(destination: present
+                ) {
+                    Text(buttonText)
+                }
+                .foregroundColor(Color.white)
+                .padding(.horizontal, 30)
+                .padding(.vertical, 15)
+                .background {
+                    Color.blue.opacity(0.8)
+                }
+                .cornerRadius(10)
 
+            }
             Spacer()
         }
     }

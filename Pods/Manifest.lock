@@ -36,7 +36,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   AppComponent:
-    :commit: 96510c56f97883185068c3fbbb8e009ecc777cc7
+    :commit: 1168d0b89030c74fee2b0659a40fde84c5f6862c
     :git: "git@github.com:Felipaugsts/AppComponent.git"
   SDKCommon:
     :commit: 6556333f9099c71b0c256abb4f672b2cb7df85df
